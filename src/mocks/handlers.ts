@@ -7,7 +7,7 @@ const handlers = [
     const url = new URL(request.url);
     const page = Number(url.searchParams.get("page"));
     const size = Number(url.searchParams.get("size"));
-    const start = (page - 1) * size;
+    const start = page * size;
     const end = start + size;
 
     const paginatedItems = products.slice(start, end);
